@@ -1,4 +1,5 @@
 import { HttpModule } from '@nestjs/axios';
+import { CacheModule } from '@nestjs/cache-manager';
 import { Module } from '@nestjs/common';
 import { PeopleService } from '@people/application/services/people.service';
 import { GetPaginatedPeopleUseCase } from '@people/application/use-cases/get-paginated-people.use-case';
@@ -9,7 +10,16 @@ import { GetPersonByIdController } from '@people/infrastructure/controllers/get-
 import { HTTPPeopleRepository } from '@people/infrastructure/repositories/http-people.repository';
 
 @Module({
-  imports: [HttpModule],
+  imports: [
+      HttpModule.register({
+        maxRedirects: 3,
+        timeout: 7 * 1000,
+      }),
+      CacheModule.register({
+        ttl: 24 * 60 * 60 * 1000,
+        max: 2000,
+      }),
+    ],
   controllers: [GetPaginatedPeopleController, GetPersonByIdController],
   providers: [
     {

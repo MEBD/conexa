@@ -12,14 +12,17 @@ import {
   PaginatedFilmsRaw,
 } from '@films/infrastructure/repositories/adapters/get-paginated-films.adapter';
 import { HttpService } from '@nestjs/axios';
-import { Injectable } from '@nestjs/common';
+import { CACHE_MANAGER } from '@nestjs/cache-manager';
+import { Inject, Injectable } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
+import { Cache } from 'cache-manager';
 
 @Injectable()
 export class HTTPFilmsRepository implements FilmsRepository {
   private baseURL: string;
 
   constructor(
+    @Inject(CACHE_MANAGER) private cacheManager: Cache,
     private readonly config: ConfigService<ApplicationConfiguration>,
     private readonly httpService: HttpService,
   ) {
@@ -29,6 +32,7 @@ export class HTTPFilmsRepository implements FilmsRepository {
   async getPaginatedFilms(page: string): Promise<PaginatedFilms> {
     return HTTPGetData<PaginatedFilmsRaw, PaginatedFilms>({
       service: this.httpService,
+      cache: this.cacheManager,
       url: `${this.baseURL}/films?page=${page}`,
       adapter: getPaginatedFilmsAdapter,
     });
@@ -37,6 +41,7 @@ export class HTTPFilmsRepository implements FilmsRepository {
   async getFilmById(id: number): Promise<Film> {
     return HTTPGetData<FilmByIdRaw, Film>({
       service: this.httpService,
+      cache: this.cacheManager,
       url: `${this.baseURL}/films/${id}`,
       adapter: getFilmByIdAdapter,
     });
