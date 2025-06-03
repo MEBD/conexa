@@ -13,7 +13,7 @@ interface Params<I, T> {
 export const HTTPGetData = async <I, T>(params: Params<I, T>): Promise<T> => {
   const { service, cache, url, adapter } = params;
 
-  let cachedData = await cache.get<T>(url);
+  const cachedData = await cache.get<T>(url);
   if (cachedData) return await firstValueFrom(of(cachedData));
 
   const request = service.get<I>(url);
