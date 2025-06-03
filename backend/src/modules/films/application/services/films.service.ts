@@ -1,8 +1,8 @@
-import { Injectable, Inject } from '@nestjs/common';
-import { FilmsRepository } from '@films/domain/films.repository';
-import { PaginatedFilms } from '@films/domain/paginated-films.entity';
 import { Film } from '@films/domain/film.entity';
 import { FILMS_RESPOSITORY_KEY } from '@films/domain/films.constants';
+import { FilmsRepository } from '@films/domain/films.repository';
+import { PaginatedFilms } from '@films/domain/paginated-films.entity';
+import { Inject, Injectable } from '@nestjs/common';
 
 @Injectable()
 export class FilmsService {

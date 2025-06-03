@@ -1,6 +1,6 @@
-import { Inject, Injectable } from '@nestjs/common';
 import { FilmsService } from '@films/application/services/films.service';
 import { Film } from '@films/domain/film.entity';
+import { Inject, Injectable } from '@nestjs/common';
 
 @Injectable()
 export class GetFilmByIdUseCase {

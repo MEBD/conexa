@@ -1,6 +1,6 @@
 import { Inject, Injectable } from '@nestjs/common';
-import { PaginatedPeople } from '@people/domain/paginated-people.entity';
 import { PeopleService } from '@people/application/services/people.service';
+import { PaginatedPeople } from '@people/domain/paginated-people.entity';
 
 @Injectable()
 export class GetPaginatedPeopleUseCase {

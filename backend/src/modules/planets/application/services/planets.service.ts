@@ -1,8 +1,8 @@
-import { Injectable, Inject } from '@nestjs/common';
-import { PlanetsRepository } from '@planets/domain/planets.repository';
+import { Inject, Injectable } from '@nestjs/common';
 import { PaginatedPlanets } from '@planets/domain/paginated-planets.entity';
 import { Planet } from '@planets/domain/planet.entity';
 import { PLANETS_RESPOSITORY_KEY } from '@planets/domain/planets.constants';
+import { PlanetsRepository } from '@planets/domain/planets.repository';
 
 @Injectable()
 export class PlanetsService {

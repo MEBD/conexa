@@ -1,19 +1,19 @@
-import { Injectable } from '@nestjs/common';
-import { ConfigService } from '@nestjs/config';
-import { HttpService } from '@nestjs/axios';
-import { PaginatedFilms } from '@films/domain/paginated-films.entity';
-import { FilmsRepository } from '@films/domain/films.repository';
-import { Film } from '@films/domain/film.entity';
 import { ApplicationConfiguration } from '@application/domain/application-configuration';
 import { HTTPGetData } from '@application/infrastructure/http/http-get-data';
-import {
-  getPaginatedFilmsAdapter,
-  PaginatedFilmsRaw,
-} from '@films/infrastructure/repositories/adapters/get-paginated-films.adapter';
+import { Film } from '@films/domain/film.entity';
+import { FilmsRepository } from '@films/domain/films.repository';
+import { PaginatedFilms } from '@films/domain/paginated-films.entity';
 import {
   FilmByIdRaw,
   getFilmByIdAdapter,
 } from '@films/infrastructure/repositories/adapters/get-film-by-id.adapter';
+import {
+  getPaginatedFilmsAdapter,
+  PaginatedFilmsRaw,
+} from '@films/infrastructure/repositories/adapters/get-paginated-films.adapter';
+import { HttpService } from '@nestjs/axios';
+import { Injectable } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
 
 @Injectable()
 export class HTTPFilmsRepository implements FilmsRepository {

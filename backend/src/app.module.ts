@@ -1,10 +1,10 @@
-import { Module } from '@nestjs/common';
-import { PlanetsModule } from './modules/planets/planets.module';
-import { ConfigModule } from '@nestjs/config';
-import { JoiValidateConfigurationSchema } from './modules/application/infrastructure/configuration/joi-validate-configuration.schema';
 import { FilmsModule } from '@films/films.module';
+import { Module } from '@nestjs/common';
+import { ConfigModule } from '@nestjs/config';
 import { PeopleModule } from '@people/people.module';
 import { StarshipsModule } from '@starships/films.module';
+import { JoiValidateConfigurationSchema } from './modules/application/infrastructure/configuration/joi-validate-configuration.schema';
+import { PlanetsModule } from './modules/planets/planets.module';
 
 @Module({
   imports: [

@@ -1,8 +1,8 @@
 import { Controller, Get, Param } from '@nestjs/common';
-import { GetPlanetByIdUseCase } from '@planets/application/use-cases/get-planet-by-id.use-case';
-import { GetPlanetByIdDTO } from '@planets/infrastructure/controllers/get-planet-by-id.dto';
 import { ApiTags } from '@nestjs/swagger';
+import { GetPlanetByIdUseCase } from '@planets/application/use-cases/get-planet-by-id.use-case';
 import { Planet } from '@planets/domain/planet.entity';
+import { GetPlanetByIdDTO } from '@planets/infrastructure/controllers/get-planet-by-id.dto';
 
 @ApiTags('Planets')
 @Controller('/planets')

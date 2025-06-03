@@ -1,9 +1,9 @@
 import { Controller, Get, Query } from '@nestjs/common';
-import { GetPaginatedPeopleDTO } from './get-paginated-people.dto';
 import { ApiTags } from '@nestjs/swagger';
+import { GetPaginatedPeopleUseCase } from '@people/application/use-cases/get-paginated-people.use-case';
 import { PaginatedPeople } from '@people/domain/paginated-people.entity';
 import { PAGINATED_PEOPLE_DEFAULT_PAGE } from '@people/domain/people.constants';
-import { GetPaginatedPeopleUseCase } from '@people/application/use-cases/get-paginated-people.use-case';
+import { GetPaginatedPeopleDTO } from './get-paginated-people.dto';
 
 @ApiTags('People')
 @Controller('/people')

@@ -1,6 +1,6 @@
-import { Inject, Injectable } from '@nestjs/common';
-import { PaginatedFilms } from '@films/domain/paginated-films.entity';
 import { FilmsService } from '@films/application/services/films.service';
+import { PaginatedFilms } from '@films/domain/paginated-films.entity';
+import { Inject, Injectable } from '@nestjs/common';
 
 @Injectable()
 export class GetPaginatedFilmsUseCase {

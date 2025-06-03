@@ -1,8 +1,8 @@
-import { Injectable, Inject } from '@nestjs/common';
-import { StarshipsRepository } from '@starships/domain/starships.repository';
+import { Inject, Injectable } from '@nestjs/common';
 import { PaginatedStarships } from '@starships/domain/paginated-starships.entity';
 import { Starship } from '@starships/domain/starship.entity';
 import { STARSHIPS_RESPOSITORY_KEY } from '@starships/domain/starships.constants';
+import { StarshipsRepository } from '@starships/domain/starships.repository';
 
 @Injectable()
 export class StarshipsService {

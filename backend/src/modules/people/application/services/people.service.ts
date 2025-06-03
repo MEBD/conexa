@@ -1,8 +1,8 @@
-import { Injectable, Inject } from '@nestjs/common';
-import { PeopleRepository } from '@people/domain/people.repository';
+import { Inject, Injectable } from '@nestjs/common';
 import { PaginatedPeople } from '@people/domain/paginated-people.entity';
-import { Person } from '@people/domain/person.entity';
 import { PEOPLE_RESPOSITORY_KEY } from '@people/domain/people.constants';
+import { PeopleRepository } from '@people/domain/people.repository';
+import { Person } from '@people/domain/person.entity';
 
 @Injectable()
 export class PeopleService {

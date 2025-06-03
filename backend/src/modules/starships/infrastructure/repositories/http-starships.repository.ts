@@ -1,18 +1,18 @@
-import { Injectable } from '@nestjs/common';
-import { ConfigService } from '@nestjs/config';
-import { HttpService } from '@nestjs/axios';
-import { PaginatedStarships } from '@starships/domain/paginated-starships.entity';
-import { StarshipsRepository } from '@starships/domain/starships.repository';
-import { Starship } from '@starships/domain/starship.entity';
 import { ApplicationConfiguration } from '@application/domain/application-configuration';
 import { HTTPGetData } from '@application/infrastructure/http/http-get-data';
+import { HttpService } from '@nestjs/axios';
+import { Injectable } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
+import { PaginatedStarships } from '@starships/domain/paginated-starships.entity';
+import { Starship } from '@starships/domain/starship.entity';
+import { StarshipsRepository } from '@starships/domain/starships.repository';
 import {
   getPaginatedStarshipsAdapter,
   PaginatedStarshipsRaw,
 } from '@starships/infrastructure/repositories/adapters/get-paginated-starships.adapter';
 import {
-  StarshipByIdRaw,
   getStarshipByIdAdapter,
+  StarshipByIdRaw,
 } from '@starships/infrastructure/repositories/adapters/get-starship-by-id.adapter';
 
 @Injectable()

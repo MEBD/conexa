@@ -1,8 +1,8 @@
 import { getPageFromURL } from '@application/infrastructure/adapters/get-page-from-url';
 import { PaginatedFilms } from '@films/domain/paginated-films.entity';
 import {
-  getFilmByIdAdapter,
   FilmByIdRaw,
+  getFilmByIdAdapter,
 } from '@films/infrastructure/repositories/adapters/get-film-by-id.adapter';
 
 export interface PaginatedFilmsRaw {

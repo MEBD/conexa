@@ -1,5 +1,5 @@
-import { Planet } from '@planets/domain/planet.entity';
 import { PaginatedPlanets } from '@planets/domain/paginated-planets.entity';
+import { Planet } from '@planets/domain/planet.entity';
 
 export interface PlanetsRepository {
   getPaginatedPlanets(page?: string): Promise<PaginatedPlanets>;

@@ -1,6 +1,6 @@
 import { Inject, Injectable } from '@nestjs/common';
-import { PaginatedPlanets } from '@planets/domain/paginated-planets.entity';
 import { PlanetsService } from '@planets/application/services/planets.service';
+import { PaginatedPlanets } from '@planets/domain/paginated-planets.entity';
 
 @Injectable()
 export class GetPaginatedPlanetsUseCase {
