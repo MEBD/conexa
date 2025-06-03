@@ -1,9 +1,9 @@
 import { GetPaginatedFilmsUseCase } from '@films/application/use-cases/get-paginated-films.use-case';
 import { PAGINATED_FILMS_DEFAULT_PAGE } from '@films/domain/films.constants';
 import { PaginatedFilms } from '@films/domain/paginated-films.entity';
+import { GetPaginatedFilmsDTO } from '@films/infrastructure/controllers/get-paginated-films.dto';
 import { Controller, Get, Query } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
-import { GetPaginatedFilmsDTO } from './get-paginated-films.dto';
 
 @ApiTags('Films')
 @Controller('/films')

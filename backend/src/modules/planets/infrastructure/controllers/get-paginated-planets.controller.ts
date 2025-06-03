@@ -3,7 +3,7 @@ import { ApiTags } from '@nestjs/swagger';
 import { GetPaginatedPlanetsUseCase } from '@planets/application/use-cases/get-paginated-planets.use-case';
 import { PaginatedPlanets } from '@planets/domain/paginated-planets.entity';
 import { PAGINATED_PLANETS_DEFAULT_PAGE } from '@planets/domain/planets.constants';
-import { GetPaginatedPlanetsDTO } from './get-paginated-planets.dto';
+import { GetPaginatedPlanetsDTO } from '@planets/infrastructure/controllers/get-paginated-planets.dto';
 
 @ApiTags('Planets')
 @Controller('/planets')
