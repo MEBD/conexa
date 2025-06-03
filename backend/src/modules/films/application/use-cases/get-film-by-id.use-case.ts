@@ -4,9 +4,7 @@ import { Film } from '@films/domain/film.entity';
 
 @Injectable()
 export class GetFilmByIdUseCase {
-  constructor(
-    @Inject(FilmsService) private readonly service: FilmsService,
-  ) {}
+  constructor(@Inject(FilmsService) private readonly service: FilmsService) {}
 
   async run(id: number): Promise<Film> {
     return await this.service.getFilmById(id);

@@ -4,6 +4,7 @@ import { ConfigModule } from '@nestjs/config';
 import { JoiValidateConfigurationSchema } from './modules/application/infrastructure/configuration/joi-validate-configuration.schema';
 import { FilmsModule } from '@films/films.module';
 import { PeopleModule } from '@people/people.module';
+import { StarshipsModule } from '@starships/films.module';
 
 @Module({
   imports: [
@@ -13,9 +14,10 @@ import { PeopleModule } from '@people/people.module';
       envFilePath: `.env.${process.env.NODE_ENV || 'development'}`,
     }),
     // Modules
-    PlanetsModule,
     FilmsModule,
     PeopleModule,
+    PlanetsModule,
+    StarshipsModule,
   ],
 })
 export class AppModule {}

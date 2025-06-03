@@ -21,7 +21,8 @@
       "@application/*": ["src/modules/application/*"],
       "@films/*": ["src/modules/films/*"],
       "@people/*": ["src/modules/people/*"],
-      "@planets/*": ["src/modules/planets/*"]
+      "@planets/*": ["src/modules/planets/*"],
+      "@starships/*": ["src/modules/starships/*"]
     }
   }
 }

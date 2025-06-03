@@ -4,9 +4,7 @@ import { Person } from '@people/domain/person.entity';
 
 @Injectable()
 export class GetPersonByIdUseCase {
-  constructor(
-    @Inject(PeopleService) private readonly service: PeopleService,
-  ) {}
+  constructor(@Inject(PeopleService) private readonly service: PeopleService) {}
 
   async run(id: number): Promise<Person> {
     return await this.service.getPersonById(id);
