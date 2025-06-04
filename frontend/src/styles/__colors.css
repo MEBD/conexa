@@ -1,0 +1,41 @@
+/* TODO: Revisar agregar profundidad, curca cromatica y herencia mediante HCL*/
+:root {
+  --background: #1B2229;
+  --background-contrast-text: #DCE3E6;
+
+  --surface: #29343F;
+  --surface-contrast-text: #DCE3E6;
+
+  --accent: #10161B;
+  --accent-contrast-text: #DCE3E6;
+
+  --primary-light: #fcffa4;
+  --primary-main: #EBF135;
+  --primary-dark: #c8ce15;
+  --primary-contrast-text: #1B2229;
+
+  --secondary-light: #273070;
+  --secondary-main: #121a52;
+  --secondary-dark: #070b30;
+  --secondary-contrast-text: #ffffff;
+
+  --status-error-light: #ffeaed;
+  --status-error-main: #cd1812;
+  --status-error-dark: #870f00;
+  --status-error-contrast-text: #ffffff;
+
+  --status-info-light: #83dcff;
+  --status-info-main: #26c3ff;
+  --status-info-dark: #1497ca;
+  --status-info-contrast-text: #202327;
+
+  --status-warning-light: #fdf8c8;
+  --status-warning-main: #ffba33;
+  --status-warning-dark: #7c6600;
+  --status-warning-contrast-text: #000000;
+
+  --status-success-light: #cdeccd;
+  --status-success-main: #1c8747;
+  --status-success-dark: #004a1e;
+  --status-success-contrast-text: #202327;
+}

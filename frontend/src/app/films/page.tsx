@@ -1,19 +1,19 @@
 "use client";
 
-import InfiniteScrollWrapper from "@/components/shared/infinite-scroll-wrapper/infinite-scroll-wrapper";
+import InfiniteScrollWrapper from "@/components/infinite-scroll-wrapper/infinite-scroll-wrapper";
 import styles from "./page.module.css";
-import FilmItem, {
-  FilmItemData,
-} from "@/components/modules/films/film-item/film-item";
+import FilmItem from "@/app/films/components/film-item/film-item";
+import { Film } from "@/shared/domain/film.entity";
+import Typography from "@/components/typography/typography";
 
-const renderItem = (uid: string, data: FilmItemData): React.ReactNode => {
+const renderItem = (uid: string, data: Film): React.ReactNode => {
   return <FilmItem key={uid} data={data}></FilmItem>;
 };
 
 export default function FilmsPage() {
   return (
     <div className={styles.films}>
-      <h1>Films</h1>
+      <Typography variant="h1">Films</Typography>
       <InfiniteScrollWrapper
         path="films"
         renderItem={renderItem}

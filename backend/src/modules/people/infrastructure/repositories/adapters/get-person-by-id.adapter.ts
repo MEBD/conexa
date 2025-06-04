@@ -26,7 +26,7 @@ export const getPersonByIdAdapter = (data: PersonByIdRaw): Person => {
     data.name,
     data.gender,
     data.birth_year,
-    parseInt(data.height),
+    data.height,
     data.eye_color,
     data.hair_color,
     data.skin_color,

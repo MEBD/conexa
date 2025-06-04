@@ -1,0 +1,6 @@
+.starship-item {
+  background: var(--surface);
+  color: var(--surface-contrast-text);
+  padding: var(--size-45);
+  border-radius: var(--size-border-radius-medium);
+}

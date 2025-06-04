@@ -1,22 +1,17 @@
-"use client";
-
+import Typography from "@/components/typography/typography";
 import styles from "./planet-item.module.css";
-
-export interface PlanetItemData {
-  id: number;
-  name: string;
-}
+import { Planet } from "@/shared/domain/planet.entity";
 
 interface Props {
   key: string;
-  data: PlanetItemData;
+  data: Planet;
 }
 
 export default function PlanetItem(props: Props): React.ReactNode {
   const { data } = props;
   return (
     <div className={styles["planet-item"]}>
-      <h1>{data.name}</h1>
+      <Typography variant="h2">{data.name}</Typography>
       <p>{data.id}</p>
     </div>
   );

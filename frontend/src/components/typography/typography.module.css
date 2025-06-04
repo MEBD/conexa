@@ -1,0 +1,105 @@
+.typography {
+  color: inherit;
+}
+
+.typography__h1,
+.typography__h2,
+.typography__h3,
+.typography__h4,
+.typography__h5,
+.typography__h6,
+.typography__call-to-action-large,
+.typography__call-to-action-medium,
+.typography__call-to-action-small {
+  font-family: var(--font-family-for-heading);
+  font-optical-sizing: auto;
+  font-weight: var(--font-weight-regular);
+  font-style: normal;
+}
+
+.typography__subtitle,
+.typography__subtitleVariant,
+.typography__body,
+.typography__bodyVariant,
+.typography__caption,
+.typography__caption--variant {
+  font-family: var(--font-family-for-body);
+  font-optical-sizing: auto;
+  font-weight: var(--font-weight-regular);
+  font-style: normal;
+}
+
+.typography__h1 {
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1);
+}
+
+.typography__h2 {
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2);
+}
+
+.typography__h3 {
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3);
+}
+
+.typography__h4 {
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-h4);
+}
+
+.typography__h5 {
+  font-size: var(--font-size-h5);
+  line-height: var(--line-height-h5);
+}
+
+.typography__h6 {
+  font-size: var(--font-size-h6);
+  line-height: var(--line-height-h6);
+}
+
+.typography__subtitle {
+  font-size: var(--font-size-subtitle);
+  line-height: var(--line-height-subtitle);
+}
+
+.typography__subtitle--variant {
+  font-size: var(--font-size-subtitle-variant);
+  line-height: var(--line-height-subtitle-variant);
+}
+
+.typography__body {
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-body);
+}
+
+.typography__body--variant {
+  font-size: var(--font-size-body-variant);
+  line-height: var(--line-height-body-variant);
+}
+
+.typography__caption {
+  font-size: var(--font-size-caption);
+  line-height: var(--line-height-caption);
+}
+
+.typography__caption---variant {
+  font-size: var(--font-size-caption-variant);
+  line-height: var(--line-height-caption-variant);
+}
+
+.typography__call-to-action-large {
+  font-size: var(--font-size-call-to-action-large);
+  line-height: var(--line-height-call-to-action-large);
+}
+
+.typography__call-to-action-medium {
+  font-size: var(--font-size-call-to-action-medium);
+  line-height: var(--line-height-call-to-action-medium);
+}
+
+.typography__call-to-action-small {
+  font-size: var(--font-size-call-to-action-small);
+  line-height: var(--line-height-call-to-action-small);
+}

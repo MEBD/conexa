@@ -1,0 +1,30 @@
+:root {
+  /* Properties */
+  --size-ratio: 0.5rem;
+  /* Size */
+  --size-05: calc(var(--size-ratio) * 0.5);
+  --size-10: calc(var(--size-ratio) * 1);
+  --size-15: calc(var(--size-ratio) * 1.5);
+  --size-20: calc(var(--size-ratio) * 2);
+  --size-25: calc(var(--size-ratio) * 2.5);
+  --size-30: calc(var(--size-ratio) * 3);
+  --size-35: calc(var(--size-ratio) * 3.5);
+  --size-40: calc(var(--size-ratio) * 4);
+  --size-45: calc(var(--size-ratio) * 4.5);
+  --size-50: calc(var(--size-ratio) * 5);
+  --size-55: calc(var(--size-ratio) * 5.5);
+  --size-60: calc(var(--size-ratio) * 6);
+  --size-65: calc(var(--size-ratio) * 6.5);
+  --size-70: calc(var(--size-ratio) * 7);
+  --size-75: calc(var(--size-ratio) * 7.5);
+  --size-80: calc(var(--size-ratio) * 8);
+  --size-85: calc(var(--size-ratio) * 8.5);
+  --size-90: calc(var(--size-ratio) * 9);
+  --size-95: calc(var(--size-ratio) * 9.5);
+  --size-100: calc(var(--size-ratio) * 10);
+  /* Border */
+  --size-border-radius-width: calc(var(--size-ratio) * 0.3);
+  --size-border-radius-small: calc(var(--size-ratio) * 1);
+  --size-border-radius-medium: calc(var(--size-ratio) * 1.5);
+  --size-border-radius-large: calc(var(--size-ratio) * 2);
+}

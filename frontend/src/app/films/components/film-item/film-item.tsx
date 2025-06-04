@@ -1,22 +1,17 @@
-"use client";
-
+import { Film } from "@/shared/domain/film.entity";
 import styles from "./film-item.module.css";
-
-export interface FilmItemData {
-  id: number;
-  title: string;
-}
+import Typography from "@/components/typography/typography";
 
 interface Props {
   key: string;
-  data: FilmItemData;
+  data: Film;
 }
 
 export default function FilmItem(props: Props): React.ReactNode {
   const { data } = props;
   return (
     <div className={styles["film-item"]}>
-      <h1>{data.title}</h1>
+      <Typography variant="h2">{data.title}</Typography>
       <p>{data.id}</p>
     </div>
   );

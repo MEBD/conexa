@@ -1,0 +1,43 @@
+:root {
+  /* Properties */
+  --font-size-ratio: 1rem;
+  /* Font family */
+  --font-family-for-heading: "Fraunces", serif;
+  --font-family-for-body: "Nunito Sans", sans-serif;
+  /* Font weitght */
+  --font-weight-regular: 400;
+  --font-weight-semibold: 500;
+  --font-weight-bold: 700;
+  /* Font size */
+  --font-size-h1: calc(var(--font-size-ratio) * 4);
+  --font-size-h2: calc(var(--font-size-ratio) * 2.7);
+  --font-size-h3: calc(var(--font-size-ratio) * 1.9);
+  --font-size-h4: calc(var(--font-size-ratio) * 1.4);
+  --font-size-h5: calc(var(--font-size-ratio) * 1.1);
+  --font-size-h6: calc(var(--font-size-ratio) * 0.8);
+  --font-size-subtitle: calc(var(--font-size-ratio) * 1);
+  --font-size-subtitle-variant: calc(var(--font-size-ratio) * 0.8);
+  --font-size-body: calc(var(--font-size-ratio) * 1);
+  --font-size-body-variant: calc(var(--font-size-ratio) * 1.2);
+  --font-size-caption: calc(var(--font-size-ratio) * 0.9);
+  --font-size-caption-variant: calc(var(--font-size-ratio) * 0.7);
+  --font-size-call-to-action-large: calc(var(--font-size-ratio) * 1.3);
+  --font-size-call-to-action-medium: calc(var(--font-size-ratio) * 1);
+  --font-size-call-to-action-small: calc(var(--font-size-ratio) * 0.8);
+  /* Line height */
+  --line-height-h1: calc(var(--font-size-ratio) * 4.2);
+  --line-height-h2: calc(var(--font-size-ratio) * 3);
+  --line-height-h3: calc(var(--font-size-ratio) * 2.2);
+  --line-height-h4: calc(var(--font-size-ratio) * 1.6);
+  --line-height-h5: calc(var(--font-size-ratio) * 1.4);
+  --line-height-h6: calc(var(--font-size-ratio) * 1.1);
+  --line-height-subtitle: calc(var(--font-size-ratio) * 1.2);
+  --line-height-subtitle-variant: calc(var(--font-size-ratio) * 1.1);
+  --line-height-body: calc(var(--font-size-ratio) * 1.2);
+  --line-height-body-variant: calc(var(--font-size-ratio) * 1.5);
+  --line-height-caption: calc(var(--font-size-ratio) * 1.1);
+  --line-height-caption-variant: calc(var(--font-size-ratio) * 0.9);
+  --line-height-call-to-action-large: calc(var(--font-size-ratio) * 1.3);
+  --line-height-call-to-action-medium: calc(var(--font-size-ratio) * 1);
+  --line-height-call-to-action-small: calc(var(--font-size-ratio) * 0.8);
+}

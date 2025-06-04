@@ -4,7 +4,7 @@ export class Person {
     public name: string,
     public gender: string,
     public birthYear: string,
-    public height: string,
+    public height: number,
     public eyeColor: string,
     public hairColor: string,
     public skinColor: string,

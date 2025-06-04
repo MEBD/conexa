@@ -1,19 +1,21 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
 
 import Link from "next/link";
-import Logotype from "@/components/ui/logotype/logotype";
+import Logotype from "@/components/logotype/logotype";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+import { Fraunces, Nunito_Sans } from "next/font/google";
+
+const fraunces = Fraunces({
   subsets: ["latin"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const nunitoSans = Nunito_Sans({
   subsets: ["latin"],
+  display: "swap",
 });
+
+import "../styles/index.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,8 +28,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+    <html lang="en" className={`${fraunces.className} ${nunitoSans.className}`}>
+      <body>
         <nav>
           <Link href="/">
             <Logotype />

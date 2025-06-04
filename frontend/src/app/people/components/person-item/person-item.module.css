@@ -1,0 +1,6 @@
+.person-item {
+  background: black;
+  color: greenyellow;
+  min-height: 300px;
+  border: 1px solid greenyellow;
+}
