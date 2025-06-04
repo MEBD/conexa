@@ -1,18 +1,19 @@
-import Typography from "@/components/typography/typography";
-import styles from "./starship-item.module.css";
-import { Starship } from "@/shared/domain/starship.entity";
+import { Starship } from '@/shared/domain/starship.entity';
+import { ReactNode } from 'react';
+
+import Typography from '@/components/typography/typography';
+
+import InfiniteScrollItem from '@/components/infinite-scroll-item/infinite-scroll-item';
 
 interface Props {
   key: string;
   data: Starship;
 }
 
-export default function StarshipItem(props: Props): React.ReactNode {
+export default function StarshipItem(props: Props): ReactNode {
   const { data } = props;
   return (
-    <div className={styles["starship-item"]}>
-      <Typography variant="caption">#{data.id}</Typography>
-      <Typography variant="h3">{data.name}</Typography>
+    <InfiniteScrollItem id={data.id} title={data.name}>
       <Typography variant="body">Model: {data.model}</Typography>
       <Typography variant="body">Manufacturer: {data.manufacturer}</Typography>
       <Typography variant="body">
@@ -35,7 +36,7 @@ export default function StarshipItem(props: Props): React.ReactNode {
       <Typography variant="body">
         Starship class: {data.starshipClass}
       </Typography>
-    </div>
+    </InfiniteScrollItem>
   );
 }
 // <Typography variant="body">Name: {data.name}</Typography>

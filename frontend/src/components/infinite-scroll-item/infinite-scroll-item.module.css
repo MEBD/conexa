@@ -1,0 +1,49 @@
+.infinite-scroll-item {
+  position: relative;
+
+  background: var(--background);
+  background: linear-gradient(30deg, var(--background) 0%, var(--surface) 100%);
+
+  color: var(--surface-contrast-text);
+  padding: var(--size-45);
+  border-radius: var(--size-border-radius-medium);
+  box-shadow: 0px 5px 10px 5px rgba(0, 0, 0, 0.25);
+  transition: all 0.15s ease-in-out;
+  overflow: hidden;
+}
+
+.infinite-scroll-item:hover {
+  transform: scale(1.06);
+  color: var(--accent-contrast-text);
+}
+
+.infinite-scroll-item-content {
+  position: relative;
+  z-index: 2;
+}
+
+.infinite-scroll-item::before {
+  position: absolute;
+  content: '';
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  border-radius: var(--size-border-radius-medium);
+
+  background: var(--background);
+  background: linear-gradient(
+    5deg,
+    var(--background) 0%,
+    var(--accent) 94%,
+    var(--primary-dark) 100%
+  );
+
+  transition: opacity 0.5s linear;
+  opacity: 0;
+}
+
+.infinite-scroll-item:hover::before {
+  opacity: 1;
+}

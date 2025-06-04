@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { useEffect, useState } from "react";
-import styles from "./infinite-scroll-wrapper.module.css";
-import InfiniteScroll from "react-infinite-scroll-component";
-import { v4 as uuidv4 } from "uuid";
+import { useEffect, useState } from 'react';
+import InfiniteScroll from 'react-infinite-scroll-component';
+import { v4 as uuidv4 } from 'uuid';
+import styles from './infinite-scroll-wrapper.module.css';
 
-const API_URL = "http://localhost:3333/";
+const API_URL = 'http://localhost:3333/';
 
 interface Props<T> {
   path: string;
@@ -34,8 +34,6 @@ export default function InfiniteScrollWrapper<T>(props: Props<T>) {
     const hasMore = !!data.next;
     const url = getURL(path, data.next);
 
-    console.log(path);
-
     setItems((previousItems) => [...previousItems, ...data.results]);
     setNextUrl(url);
     setHasMore(hasMore);
@@ -43,12 +41,12 @@ export default function InfiniteScrollWrapper<T>(props: Props<T>) {
 
   useEffect(() => {
     fetchData();
-  }, [path]);
+  }, []);
 
   return (
-    <div className={styles["infinite-scroll-wrapper"]}>
+    <div className={styles['infinite-scroll-wrapper']}>
       <InfiniteScroll
-        className={styles["infinite-scroll"]}
+        className={styles['infinite-scroll']}
         dataLength={items.length}
         next={fetchData}
         hasMore={hasMore}

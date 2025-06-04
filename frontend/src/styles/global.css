@@ -23,7 +23,7 @@ ol {
 }
 
 body {
-  font-family: "Arial", sans-serif;
+  font-family: 'Arial', sans-serif;
   color: var(--background-contrast-text);
   background-color: var(--background);
 }

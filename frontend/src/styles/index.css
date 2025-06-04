@@ -1,9 +1,9 @@
-@import "./__breakpoints.css";
-@import "./__colors.css";
-@import "./__depth.css";
-@import "./__sizes.css";
-@import "./__spacing.css";
-@import "./__transitions.css";
-@import "./__typography.css";
+@import './__breakpoints.css';
+@import './__colors.css';
+@import './__depth.css';
+@import './__sizes.css';
+@import './__spacing.css';
+@import './__transitions.css';
+@import './__typography.css';
 
-@import "./global.css";
+@import './global.css';

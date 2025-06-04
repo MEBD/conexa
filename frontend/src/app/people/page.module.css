@@ -3,12 +3,12 @@
   color: white;
 }
 
-.infinite-scroll-container{
+.infinite-scroll-container {
   margin: 0 auto;
   max-width: 80vw;
 }
 
-.infinite-scroll{
+.infinite-scroll {
   display: flex;
   flex-wrap: wrap;
 }

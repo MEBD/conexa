@@ -6,7 +6,8 @@
     "dev": "next dev -p 4444",
     "build": "next build -p 4444",
     "start": "next start -p 4444",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write \"src/**/*.*\""
   },
   "dependencies": {
     "next": "15.3.3",
@@ -23,6 +24,9 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.3.3",
+    "eslint-config-prettier": "^10.1.5",
+    "prettier": "3.5.3",
+    "prettier-plugin-organize-imports": "^4.1.0",
     "typescript": "^5"
   }
 }

@@ -2,8 +2,8 @@
   /* Properties */
   --font-size-ratio: 1rem;
   /* Font family */
-  --font-family-for-heading: "Fraunces", serif;
-  --font-family-for-body: "Nunito Sans", sans-serif;
+  --font-family-for-heading: 'Fraunces', serif;
+  --font-family-for-body: 'Nunito Sans', sans-serif;
   /* Font weitght */
   --font-weight-regular: 400;
   --font-weight-semibold: 500;

@@ -1,11 +1,14 @@
-.infinite-scroll-wrapper{
+.infinite-scroll-wrapper {
   margin: 0 auto;
   max-width: var(--breakpoint-lg);
 }
 
-.infinite-scroll{
+.infinite-scroll {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(calc(var(--size-ratio) * 40), 1fr));
-  gap: var(--size-30);
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(calc(var(--size-ratio) * 40), 1fr)
+  );
+  gap: var(--size-60);
   padding: var(--size-30);
 }
