@@ -10,4 +10,7 @@ export const JoiValidateConfigurationSchema = Joi.object({
   DOCUMENTATION_DESCRIPTION: Joi.string().required(),
   DOCUMENTATION_PATH: Joi.string().required(),
   STAR_WARS_API: Joi.string().required().uri(),
+  CORS_ORIGIN: Joi.string().required().uri(),
+  CORS_METHODS: Joi.string().required(),
+  CORS_CREDENTIALS: Joi.boolean().required(),
 });

@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Image from "next/image";
+
 import Link from "next/link";
+import Logotype from "@/components/ui/logotype/logotype";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -29,14 +30,7 @@ export default function RootLayout({
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <nav>
           <Link href="/">
-            <Image
-              // className={styles.logotype}
-              src="/images/logotype.svg"
-              alt="Starwars"
-              width={180}
-              height={90}
-              priority
-            />
+            <Logotype />
           </Link>
           <ul>
             <li>

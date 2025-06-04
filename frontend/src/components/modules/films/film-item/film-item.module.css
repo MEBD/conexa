@@ -1,0 +1,6 @@
+.film-item {
+  background: black;
+  color: pink;
+  min-height: 300px;
+  border: 1px solid pink;
+}

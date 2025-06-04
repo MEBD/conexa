@@ -1,4 +1,22 @@
-.people {
+.people-page {
   background: blue;
   color: white;
+}
+
+.infinite-scroll-container{
+  margin: 0 auto;
+  max-width: 80vw;
+}
+
+.infinite-scroll{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.people-item {
+  display: block;
+  width: 30vw;
+  height: 40vh;
+  border: 10px solid red;
+  margin: 0 auto 10px auto;
 }

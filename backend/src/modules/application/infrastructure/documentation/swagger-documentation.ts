@@ -1,16 +1,14 @@
 import { INestApplication } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
-export class SwaggerDocumentBuilder {
+export class SwaggerDocumentation {
   constructor(
     private readonly app: INestApplication<any>,
     private readonly version: string,
     private readonly path: string,
     private readonly title: string,
     private readonly description: string,
-  ) {}
-
-  build(): void {
+  ) {
     const config = new DocumentBuilder()
       .setTitle(this.title)
       .setDescription(this.description)

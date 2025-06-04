@@ -1,0 +1,9 @@
+.infinite-scroll-wrapper{
+  margin: 0 auto;
+  max-width: 80vw;
+}
+
+.infinite-scroll{
+  display: flex;
+  flex-wrap: wrap;
+}
