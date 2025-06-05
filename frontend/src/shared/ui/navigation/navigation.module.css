@@ -6,7 +6,7 @@
   align-items: center;
   flex-wrap: wrap;
   margin: 0 auto;
-  max-width: var(--breakpoint-lg);
+  max-width: var(--desktop-max-width);
   padding: var(--size-30);
   z-index: var(--depth-nav);
 }

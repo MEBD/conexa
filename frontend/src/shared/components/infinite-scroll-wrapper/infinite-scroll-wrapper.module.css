@@ -1,6 +1,6 @@
 .infinite-scroll-wrapper {
   margin: 0 auto;
-  max-width: var(--breakpoint-lg);
+  max-width: var(--desktop-max-width);
 }
 
 .infinite-scroll {

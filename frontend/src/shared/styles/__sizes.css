@@ -27,4 +27,6 @@
   --size-border-radius-small: calc(var(--size-ratio) * 1);
   --size-border-radius-medium: calc(var(--size-ratio) * 1.5);
   --size-border-radius-large: calc(var(--size-ratio) * 2);
+  /* Desktop */
+  --desktop-max-width: 1400px;
 }

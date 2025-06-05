@@ -1,4 +1,4 @@
-# Prueba tecnica conexa
+# Prueba técnica Conexa
 
 ### Configurar y correr el backend en local
 
@@ -19,13 +19,14 @@ npm run dev
 
 # Detalles y pendientes
 
-- Ambos proyectos tienen lint y formater.
+- Ambos proyectos tienen lint y formatter.
 - El backend tiene Swagger en /documentation.
-- El backend valida la arquitectura hexagonal con el comando 'npm run validate'.
+- El backend valida la arquitectura hexagonal con el comando npm run validate.
 - El backend valida los valores de las variables de entorno.
-- Hay un cache en el backend para evitar el consumo de la API externa.
-- Agregar test unitarios a las tranformaciones de datos en los adapters del backend y los helpers del front.
-- Agregar test e2e comprobando estructuras de los response en el backend.
-- Limpiar codigo duplicado en algunos componentes y estilos en el frontend.
+- Hay un caché en el backend para evitar el consumo de la API externa.
+- El frontend usa SSR (Datalle de cada item) y CSR (Scroll infinito en las listas).
+- Agregar tests unitarios a las transformaciones de datos en los adapters del backend y los helpers del frontend.
+- Agregar tests e2e comprobando las estructuras de los responses en el backend.
+- Limpiar código duplicado en algunos componentes y estilos en el frontend.
 - Agregar logs y manejo de errores en el backend.
 - Mejorar loaders, animaciones e iconografía en el frontend.
