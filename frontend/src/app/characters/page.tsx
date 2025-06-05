@@ -6,7 +6,6 @@ import SectionHeader from '@/shared/ui/section-header/section-header';
 import Typography from '@/shared/ui/typography/typography';
 import { ReactNode } from 'react';
 import CharacterItem from './components/person-item/character-item';
-import styles from './page.module.css';
 
 const renderItem = (data: Person): ReactNode => {
   return <CharacterItem data={data}></CharacterItem>;
@@ -14,14 +13,15 @@ const renderItem = (data: Person): ReactNode => {
 
 export default function CharactersPage() {
   return (
-    <div className={styles.people}>
+    <section>
       <SectionHeader>
         <Typography variant="h1">Characters</Typography>
       </SectionHeader>
       <InfiniteScrollWrapper
-        path="people"
+        path="characters"
+        entity="people"
         renderItem={renderItem}
       ></InfiniteScrollWrapper>
-    </div>
+    </section>
   );
 }

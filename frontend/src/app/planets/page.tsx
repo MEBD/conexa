@@ -6,7 +6,6 @@ import SectionHeader from '@/shared/ui/section-header/section-header';
 import Typography from '@/shared/ui/typography/typography';
 import { ReactNode } from 'react';
 import PlanetItem from './components/planet-item/planet-item';
-import styles from './page.module.css';
 
 const renderItem = (data: Planet): ReactNode => {
   return <PlanetItem data={data}></PlanetItem>;
@@ -14,14 +13,15 @@ const renderItem = (data: Planet): ReactNode => {
 
 export default function PlanetsPage() {
   return (
-    <div className={styles.films}>
+    <section>
       <SectionHeader>
         <Typography variant="h1">Planets</Typography>
       </SectionHeader>
       <InfiniteScrollWrapper
         path="planets"
+        entity="planets"
         renderItem={renderItem}
       ></InfiniteScrollWrapper>
-    </div>
+    </section>
   );
 }

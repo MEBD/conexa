@@ -1,6 +1,6 @@
 import InfiniteScrollItem from '@/shared/components/infinite-scroll-item/infinite-scroll-item';
 import { Film } from '@/shared/domain/film.entity';
-import Typography from '@/shared/ui/typography/typography';
+import LabelValue from '@/shared/ui/label-value/label-value';
 import { ReactNode } from 'react';
 
 interface Props {
@@ -11,10 +11,10 @@ export default function FilmItem(props: Props): ReactNode {
   const { data } = props;
   return (
     <InfiniteScrollItem id={data.id} title={data.title}>
-      <Typography variant="body">Episode ID: {data.episodeId}</Typography>
-      <Typography variant="body">Director: {data.director}</Typography>
-      <Typography variant="body">Producer: {data.producer}</Typography>
-      <Typography variant="body">Release date: {data.releaseDate}</Typography>
+      <LabelValue label="Episode ID" value={data.episodeId} />
+      <LabelValue label="Director" value={data.director} />
+      <LabelValue label="Producer" value={data.producer} />
+      <LabelValue label="Release date" value={data.releaseDate} />
     </InfiniteScrollItem>
   );
 }

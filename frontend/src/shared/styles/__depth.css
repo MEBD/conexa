@@ -1,4 +1,5 @@
 :root {
+  --depth-nav: 60;
   --depth-on-overlay: 50;
   --depth-overlay: 40;
   --depth-alert: 30;
@@ -6,5 +7,4 @@
   --depth-select: 20;
   --depth-tooltip: 20;
   --depth-popover: 20;
-  --depth-nav: 10;
 }

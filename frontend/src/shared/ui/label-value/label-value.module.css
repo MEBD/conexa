@@ -1,0 +1,14 @@
+.label-value {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: var(--size-10) 0 var(--size-05) 0;
+  border-bottom: 1px solid var(--accent);
+  color: var(--background-contrast-text);
+}
+
+.label-value-accent {
+  margin-left: var(--size-10);
+  color: var(--accent-contrast-text);
+  text-align: right;
+}

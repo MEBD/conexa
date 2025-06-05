@@ -1,5 +1,6 @@
 'use client';
 
+import Typography from '@/shared/ui/typography/typography';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
@@ -11,16 +12,17 @@ const API_URL = 'http://localhost:3333';
 
 interface Props<T> {
   path: string;
+  entity: string;
   renderItem: (data: T) => React.ReactNode;
 }
 
-const getURL = (path: string, page: number = 1): string => {
-  return `${API_URL}/${path}?page=${page}`;
+const getURL = (entity: string, page: number = 1): string => {
+  return `${API_URL}/${entity}?page=${page}`;
 };
 
 export default function InfiniteScrollWrapper<T>(props: Props<T>) {
-  const { path, renderItem } = props;
-  const [nextUrl, setNextUrl] = useState<string | null>(getURL(path));
+  const { path, entity, renderItem } = props;
+  const [nextUrl, setNextUrl] = useState<string | null>(getURL(entity));
   const [hasMore, setHasMore] = useState(true);
   const [items, setItems] = useState<T[]>([]);
 
@@ -30,7 +32,7 @@ export default function InfiniteScrollWrapper<T>(props: Props<T>) {
     const response = await fetch(nextUrl);
     const data = await response.json();
     const hasMore = !!data.next;
-    const url = getURL(path, data.next);
+    const url = getURL(entity, data.next);
 
     setItems((previousItems) => [...previousItems, ...data.results]);
     setNextUrl(url);
@@ -48,8 +50,16 @@ export default function InfiniteScrollWrapper<T>(props: Props<T>) {
         dataLength={items.length}
         next={fetchData}
         hasMore={hasMore}
-        loader={<h4>Cargando...</h4>}
-        endMessage={<h4>No hay más resultados</h4>}
+        loader={
+          <div className={styles['infinite-scroll-loader']}>
+            <Typography variant="caption">Loading...</Typography>
+          </div>
+        }
+        endMessage={
+          <div className={styles['infinite-scroll-no-more-results']}>
+            <Typography variant="caption">No more results.</Typography>
+          </div>
+        }
       >
         {items.map((data) => (
           <Link href={`${path}/${(data as any).id}`} key={uuidv4()}>

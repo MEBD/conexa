@@ -6,7 +6,6 @@ import SectionHeader from '@/shared/ui/section-header/section-header';
 import Typography from '@/shared/ui/typography/typography';
 import { ReactNode } from 'react';
 import StarshipItem from './components/starship-item/starship-item';
-import styles from './page.module.css';
 
 const renderItem = (data: Starship): ReactNode => {
   return <StarshipItem data={data}></StarshipItem>;
@@ -14,14 +13,15 @@ const renderItem = (data: Starship): ReactNode => {
 
 export default function StarshipsPage() {
   return (
-    <div className={styles.films}>
+    <section>
       <SectionHeader>
         <Typography variant="h1">Starships</Typography>
       </SectionHeader>
       <InfiniteScrollWrapper
-        path="Starships"
+        path="starships"
+        entity="starships"
         renderItem={renderItem}
       ></InfiniteScrollWrapper>
-    </div>
+    </section>
   );
 }

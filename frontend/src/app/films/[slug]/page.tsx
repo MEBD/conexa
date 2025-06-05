@@ -1,8 +1,9 @@
 import { Film } from '@/shared/domain/film.entity';
+import ListToString from '@/shared/helpers/list-to-string/list-to-string';
+import LabelValue from '@/shared/ui/label-value/label-value';
 import SectionContent from '@/shared/ui/section-content/section-content';
 import SectionHeader from '@/shared/ui/section-header/section-header';
 import Typography from '@/shared/ui/typography/typography';
-import styles from './page.module.css';
 
 // TODO: Move to env
 const API_URL = 'http://localhost:3333';
@@ -16,7 +17,7 @@ export default async function FilmPage(props: Props) {
   const data: Film = await result.json();
 
   return (
-    <div className={styles['films-page']}>
+    <section>
       <SectionHeader>
         <Typography variant="h1">{data.title}</Typography>
       </SectionHeader>
@@ -25,36 +26,18 @@ export default async function FilmPage(props: Props) {
         <Typography variant="body-variant">{data.openingCrawl}</Typography>
       </SectionContent>
       <SectionContent>
-        <Typography variant="body-variant">
-          Episode id: {data.episodeId}
-        </Typography>
-        <Typography variant="body-variant">
-          Director: {data.director}
-        </Typography>
-        <Typography variant="body-variant">
-          Producer: {data.producer}
-        </Typography>
-        <Typography variant="body-variant">
-          Release date: {data.releaseDate}
-        </Typography>
-        <Typography variant="body-variant">
-          Characters: {data.characters.map((item) => `${item}, `)}
-        </Typography>
-        <Typography variant="body-variant">
-          Planets: {data.planets.map((item) => `${item}, `)}
-        </Typography>
-        <Typography variant="body-variant">
-          Starships: {data.starships.map((item) => `${item}, `)}
-        </Typography>
-        <Typography variant="body-variant">
-          Vehicles: {data.vehicles.map((item) => `${item}, `)}
-        </Typography>
-        <Typography variant="body-variant">
-          Species: {data.species.map((item) => `${item}, `)}
-        </Typography>
-        <Typography variant="body-variant">Created: {data.created}</Typography>
-        <Typography variant="body-variant">Edited: {data.edited}</Typography>
+        <LabelValue label="Episode ID" value={data.episodeId} />
+        <LabelValue label="Director" value={data.director} />
+        <LabelValue label="Producer" value={data.producer} />
+        <LabelValue label="Release date" value={data.releaseDate} />
+        <LabelValue label="Characters" value={ListToString(data.characters)} />
+        <LabelValue label="Planets" value={ListToString(data.planets)} />
+        <LabelValue label="Starships" value={ListToString(data.starships)} />
+        <LabelValue label="Vehicles" value={ListToString(data.vehicles)} />
+        <LabelValue label="Species" value={ListToString(data.species)} />
+        <LabelValue label="Created" value={data.created} />
+        <LabelValue label="Edited" value={data.edited} />
       </SectionContent>
-    </div>
+    </section>
   );
 }
