@@ -1,12 +1,6 @@
-import { ReactNode } from 'react';
-
 import Typography from '@/shared/ui/typography/typography';
+import { ReactNode } from 'react';
 import styles from './infinite-scroll-item.module.css';
-
-const itemStyle = styles['infinite-scroll-item'];
-const contentStyle = styles['infinite-scroll-item-content'];
-const idStyle = styles['infinite-scroll-item-id'];
-const titleStyle = styles['infinite-scroll-item-title'];
 
 interface Props {
   children: ReactNode;
@@ -18,12 +12,12 @@ export default function InfiniteScrollItem(props: Props): ReactNode {
   const { children, id, title } = props;
 
   return (
-    <div className={itemStyle}>
-      <div className={contentStyle}>
-        <div className={idStyle}>
+    <div className={styles['infinite-scroll-item']}>
+      <div className={styles['infinite-scroll-item-content']}>
+        <div className={styles['infinite-scroll-item-id']}>
           <Typography variant="caption">#{id}</Typography>
         </div>
-        <div className={titleStyle}>
+        <div className={styles['infinite-scroll-item-title']}>
           <Typography variant="h3">{title}</Typography>
         </div>
         {children}

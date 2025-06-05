@@ -1,6 +1,7 @@
 'use client';
 
 import InfiniteScrollWrapper from '@/shared/components/infinite-scroll-wrapper/infinite-scroll-wrapper';
+import { API } from '@/shared/constants/api';
 import { Planet } from '@/shared/domain/planet.entity';
 import SectionHeader from '@/shared/ui/section-header/section-header';
 import Typography from '@/shared/ui/typography/typography';
@@ -19,7 +20,7 @@ export default function PlanetsPage() {
       </SectionHeader>
       <InfiniteScrollWrapper
         path="planets"
-        entity="planets"
+        entity={API.planets}
         renderItem={renderItem}
       ></InfiniteScrollWrapper>
     </section>

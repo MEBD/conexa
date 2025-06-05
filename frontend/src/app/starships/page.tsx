@@ -1,6 +1,7 @@
 'use client';
 
 import InfiniteScrollWrapper from '@/shared/components/infinite-scroll-wrapper/infinite-scroll-wrapper';
+import { API } from '@/shared/constants/api';
 import { Starship } from '@/shared/domain/starship.entity';
 import SectionHeader from '@/shared/ui/section-header/section-header';
 import Typography from '@/shared/ui/typography/typography';
@@ -19,7 +20,7 @@ export default function StarshipsPage() {
       </SectionHeader>
       <InfiniteScrollWrapper
         path="starships"
-        entity="starships"
+        entity={API.starships}
         renderItem={renderItem}
       ></InfiniteScrollWrapper>
     </section>

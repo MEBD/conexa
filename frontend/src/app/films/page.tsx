@@ -1,6 +1,7 @@
 'use client';
 
 import InfiniteScrollWrapper from '@/shared/components/infinite-scroll-wrapper/infinite-scroll-wrapper';
+import { API } from '@/shared/constants/api';
 import { Film } from '@/shared/domain/film.entity';
 import SectionHeader from '@/shared/ui/section-header/section-header';
 import Typography from '@/shared/ui/typography/typography';
@@ -19,7 +20,7 @@ export default function FilmsPage() {
       </SectionHeader>
       <InfiniteScrollWrapper
         path="films"
-        entity="films"
+        entity={API.films}
         renderItem={renderItem}
       ></InfiniteScrollWrapper>
     </section>

@@ -2,11 +2,12 @@
   position: sticky;
   top: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   margin: 0 auto;
   max-width: var(--breakpoint-lg);
-  padding: var(--size-60) var(--size-30);
+  padding: var(--size-30);
   z-index: var(--depth-nav);
 }
 
@@ -14,10 +15,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100vw;
   background: var(--accent);
   background: linear-gradient(3deg, var(--background) 0%, var(--accent) 100%);
   border-radius: var(--size-border-radius-medium);
   box-shadow: var(--shadow-3);
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.navigation-links::-webkit-scrollbar {
+  display: none; /* Oculta scrollbar en Chrome, Safari, Edge moderno */
 }
 
 .navigation-links li {
@@ -28,7 +37,7 @@
 }
 
 .navigation-links li a {
-  padding: var(--size-15) var(--size-30);
+  padding: var(--size-15) var(--size-20);
   transition: all 0.15s ease-in-out;
 }
 
@@ -40,4 +49,21 @@
   color: var(--primary-main);
   background: var(--background);
   border-radius: var(--size-border-radius-medium);
+}
+
+/* TODO: Use variables */
+@media (min-width: 700px) {
+  .navigation {
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: var(--size-60) var(--size-30);
+  }
+
+  .navigation-links {
+    width: auto;
+  }
+
+  .navigation-links li a {
+    padding: var(--size-15) var(--size-30);
+  }
 }

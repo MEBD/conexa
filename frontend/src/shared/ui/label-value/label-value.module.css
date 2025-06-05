@@ -1,6 +1,6 @@
 .label-value {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   justify-content: space-between;
   padding: var(--size-10) 0 var(--size-05) 0;
   border-bottom: 1px solid var(--accent);
