@@ -1,6 +1,6 @@
+import DynamicTagComponent from '@/shared/helpers/dynamic-tag-component/dynamic-tag-component';
 import JoinStyles from '@/shared/helpers/join-styles/join-styles';
 import { ReactNode } from 'react';
-import DynamicTagComponent from '../dynamic-tag-component/dynamic-tag-component';
 import styles from './typography.module.css';
 
 const CLASS_NAME = 'typography';
@@ -57,7 +57,6 @@ interface Props {
   children: ReactNode;
   variant: keyof typeof VARIANT;
   component?: COMPONENT;
-  className?: string;
 }
 
 const getComponent = (properties: Props) => {
@@ -65,13 +64,12 @@ const getComponent = (properties: Props) => {
 };
 
 export default function Typography(properties: Props) {
-  const { children, variant, className } = properties;
+  const { children, variant } = properties;
 
   const tag = getComponent(properties);
   const joinedStyles = JoinStyles([
     styles[CLASS_NAME],
     styles[VARIANT[variant]],
-    className ?? '',
   ]);
 
   return (

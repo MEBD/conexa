@@ -1,25 +1,25 @@
 'use client';
 
 import InfiniteScrollWrapper from '@/shared/components/infinite-scroll-wrapper/infinite-scroll-wrapper';
-import { Planet } from '@/shared/domain/planet.entity';
+import { Person } from '@/shared/domain/person.entity';
 import SectionHeader from '@/shared/ui/section-header/section-header';
 import Typography from '@/shared/ui/typography/typography';
 import { ReactNode } from 'react';
-import PlanetItem from './components/planet-item/planet-item';
+import CharacterItem from './components/person-item/character-item';
 import styles from './page.module.css';
 
-const renderItem = (data: Planet): ReactNode => {
-  return <PlanetItem data={data}></PlanetItem>;
+const renderItem = (data: Person): ReactNode => {
+  return <CharacterItem data={data}></CharacterItem>;
 };
 
-export default function PlanetsPage() {
+export default function CharactersPage() {
   return (
-    <div className={styles.films}>
+    <div className={styles.people}>
       <SectionHeader>
-        <Typography variant="h1">Planets</Typography>
+        <Typography variant="h1">Characters</Typography>
       </SectionHeader>
       <InfiniteScrollWrapper
-        path="planets"
+        path="people"
         renderItem={renderItem}
       ></InfiniteScrollWrapper>
     </div>

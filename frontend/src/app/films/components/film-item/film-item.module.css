@@ -1,6 +1,6 @@
-.film-item {
+.person-item {
   background: black;
-  color: pink;
+  color: greenyellow;
   min-height: 300px;
-  border: 1px solid pink;
+  border: 1px solid greenyellow;
 }

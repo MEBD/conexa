@@ -1,16 +1,13 @@
+import InfiniteScrollItem from '@/shared/components/infinite-scroll-item/infinite-scroll-item';
+import { Person } from '@/shared/domain/person.entity';
+import Typography from '@/shared/ui/typography/typography';
 import { ReactNode } from 'react';
 
-import Typography from '@/components/typography/typography';
-
-import InfiniteScrollItem from '@/components/infinite-scroll-item/infinite-scroll-item';
-import { Person } from '@/shared/domain/person.entity';
-
 interface Props {
-  key: string;
   data: Person;
 }
 
-export default function PeronItem(props: Props): ReactNode {
+export default function CharacterItem(props: Props): ReactNode {
   const { data } = props;
   return (
     <InfiniteScrollItem id={data.id} title={data.name}>

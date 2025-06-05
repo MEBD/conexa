@@ -1,23 +1,21 @@
 'use client';
 
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import { v4 as uuidv4 } from 'uuid';
 import styles from './infinite-scroll-wrapper.module.css';
 
-const API_URL = 'http://localhost:3333/';
+// TODO: Move to env
+const API_URL = 'http://localhost:3333';
 
 interface Props<T> {
   path: string;
-  renderItem: (key: string, data: T) => React.ReactNode;
+  renderItem: (data: T) => React.ReactNode;
 }
 
-const getUID = (path: string): string => {
-  return `${path}-${uuidv4()}`;
-};
-
 const getURL = (path: string, page: number = 1): string => {
-  return `${API_URL}${path}?page=${page}`;
+  return `${API_URL}/${path}?page=${page}`;
 };
 
 export default function InfiniteScrollWrapper<T>(props: Props<T>) {
@@ -53,7 +51,11 @@ export default function InfiniteScrollWrapper<T>(props: Props<T>) {
         loader={<h4>Cargando...</h4>}
         endMessage={<h4>No hay más resultados</h4>}
       >
-        {items.map((data) => renderItem(getUID(path), data))}
+        {items.map((data) => (
+          <Link href={`${path}/${(data as any).id}`} key={uuidv4()}>
+            {renderItem(data)}
+          </Link>
+        ))}
       </InfiniteScroll>
     </div>
   );

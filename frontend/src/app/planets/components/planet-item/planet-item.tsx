@@ -1,12 +1,9 @@
+import InfiniteScrollItem from '@/shared/components/infinite-scroll-item/infinite-scroll-item';
+import { Planet } from '@/shared/domain/planet.entity';
+import Typography from '@/shared/ui/typography/typography';
 import { ReactNode } from 'react';
 
-import Typography from '@/components/typography/typography';
-
-import InfiniteScrollItem from '@/components/infinite-scroll-item/infinite-scroll-item';
-import { Planet } from '@/shared/domain/planet.entity';
-
 interface Props {
-  key: string;
   data: Planet;
 }
 

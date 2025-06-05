@@ -8,8 +8,14 @@
 
 html,
 body {
-  height: 100%;
+  height: auto;
+  min-height: 100vh;
   font-family: sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 a {

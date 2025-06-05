@@ -2,4 +2,5 @@
   margin: 0 auto;
   max-width: var(--breakpoint-lg);
   padding: var(--size-60) var(--size-30);
+  color: var(--accent-contrast-text);
 }

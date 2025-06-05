@@ -1,19 +1,20 @@
-import Typography from '@/components/typography/typography';
+import InfiniteScrollItem from '@/shared/components/infinite-scroll-item/infinite-scroll-item';
 import { Film } from '@/shared/domain/film.entity';
+import Typography from '@/shared/ui/typography/typography';
 import { ReactNode } from 'react';
-import styles from './film-item.module.css';
 
 interface Props {
-  key: string;
   data: Film;
 }
 
 export default function FilmItem(props: Props): ReactNode {
   const { data } = props;
   return (
-    <div className={styles['film-item']}>
-      <Typography variant="h2">{data.title}</Typography>
-      <p>{data.id}</p>
-    </div>
+    <InfiniteScrollItem id={data.id} title={data.title}>
+      <Typography variant="body">Episode ID: {data.episodeId}</Typography>
+      <Typography variant="body">Director: {data.director}</Typography>
+      <Typography variant="body">Producer: {data.producer}</Typography>
+      <Typography variant="body">Release date: {data.releaseDate}</Typography>
+    </InfiniteScrollItem>
   );
 }

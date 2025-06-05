@@ -1,10 +1,10 @@
 /* TODO: Revisar agregar profundidad, curca cromatica y herencia mediante HCL*/
 :root {
   --background: #1b2229;
-  --background-contrast-text: #dce3e6;
+  --background-contrast-text: #a7b6bd;
 
   --surface: #262d35;
-  --surface-contrast-text: #dce3e6;
+  --surface-contrast-text: #ccdae0;
 
   --accent: #323a42;
   --accent-contrast-text: #ffffff;

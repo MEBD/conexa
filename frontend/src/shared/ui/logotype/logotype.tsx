@@ -1,4 +1,4 @@
-import LogotypeSVG from '../../../public/images/logotype.svg';
+import LogotypeSVG from '../../../../public/images/logotype.svg';
 
 import styles from './logotype.module.css';
 

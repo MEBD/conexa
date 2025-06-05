@@ -1,12 +1,9 @@
+import InfiniteScrollItem from '@/shared/components/infinite-scroll-item/infinite-scroll-item';
 import { Starship } from '@/shared/domain/starship.entity';
+import Typography from '@/shared/ui/typography/typography';
 import { ReactNode } from 'react';
 
-import Typography from '@/components/typography/typography';
-
-import InfiniteScrollItem from '@/components/infinite-scroll-item/infinite-scroll-item';
-
 interface Props {
-  key: string;
   data: Starship;
 }
 
